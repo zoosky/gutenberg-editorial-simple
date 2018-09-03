@@ -1,0 +1,22 @@
+name = "editorial"
+description = "A classic blog theme"
+license = "MIT"
+homepage = "https://github.com/zoosky/gutenberg-hyde"
+min_version = "0.4"
+demo = "https://gutenberg-editorial-simple.netlify.com"
+
+[extra]
+hyde_sticky = true
+hyde_reverse = false
+hyde_theme = ""
+hyde_links = [
+]
+
+[author]
+name = "Andreas Kapp"
+homepage = "https://kapp.technology"
+
+[original]
+author =  "ajlkn"
+homepage = "https://html5up.net/editorial"
+repo = ""
