@@ -10,11 +10,10 @@
       <title>{% block title %}{{ config.title }}{% endblock title %}</title>
 
       <!-- CSS -->
-      <link rel="stylesheet" href="{{ get_url(path="main.css", trailing_slash=false) | safe }}">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+      <link rel="stylesheet" href="{{ get_url(path="assets/main.css", trailing_slash=false) | safe }}">
 
       {% if config.generate_rss %}
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false | safe) }}">
       {% endif %}
 
       {% block extra_head %}
@@ -155,13 +154,13 @@
                                         
                                         {% for page in section.pages | reverse %}
                                         <article>
-                                                <a href="{{ page.permalink }}" class="image"><img src="images/pic06.jpg" alt="" /></a>
+                                                <a href="{{ page.permalink | safe }}" class="image"><img src="images/pic06.jpg" alt="" /></a>
                                                 <h3>{{ page.title }}</h3>
                                                 <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
                                                 <ul class="actions">
-                                                    <li><a href="{{ page.permalink }}" class="button">More</a></li>
+                                                    <li><a href="{{ page.permalink | safe }}" class="button">More</a></li>
                                                 </ul>
-                                                <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+                                                <span class="post-date">{{ page.date | date(format="%d.%m.%Y") }}</span>
                                         </article>
                                         {% endfor %}
 									</div>
