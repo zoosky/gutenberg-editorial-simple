@@ -1,0 +1,28 @@
+<!-- Section -->
+<section>
+    <header class="major">
+        <h2>Erat lacinia</h2>
+    </header>
+    <div class="features">
+
+        {% set topsection = get_section(path="_index.md") %}
+        
+        {% set ics = ["fa-rocket","fa-paper-plane","fa-diamond","fa-signal"] %}
+
+
+        {% for p in topsection.pages | reverse %}
+        {% if loop.index > 3 %}{% break %}{% endif %}
+
+        <article>
+            <span class="icon {{ ics[1] }}"></span>
+            <div class="content">
+                <h3>{{ p.title }}} {{ loop.index }} </h3>
+                {{ p.summary | safe }}
+            </div>
+        </article>
+        {% endfor %}
+
+
+    </div>
+
+</section>

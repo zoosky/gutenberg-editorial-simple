@@ -2,12 +2,12 @@
 
 {% block banner %}
 <!-- Banner -->
-  <section id="banner">
-    <div class="content">
+<section id="banner">
+  <div class="content">
     <span class="image object">
       <img src="/images/pic10.jpg" alt="" />
     </span>
-  </section>
+</section>
 {% endblock banner %}
 
 {% block features %}
@@ -20,5 +20,8 @@
 
   {{ page.content | safe }}
 </div>
+{% include "_includes/features.html" %}
 {% endblock content %}
 
+{% block article_links %}
+{% endblock article_links %}
