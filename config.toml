@@ -4,9 +4,9 @@ title = "Editorial theme"
 description = "A clean blogging theme"
 
 [extra]
-hyde_sticky = true
-hyde_reverse = false
-hyde_theme = ""
-hyde_links = [
+editorial_sticky = true
+editorial_reverse = false
+editorial_theme = ""
+editorial_links = [
     {url = "https://google.com", name = "About"},
 ]

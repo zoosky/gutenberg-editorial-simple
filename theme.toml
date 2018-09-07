@@ -6,10 +6,10 @@ min_version = "0.4"
 demo = "https://gutenberg-editorial-simple.netlify.com"
 
 [extra]
-hyde_sticky = true
-hyde_reverse = false
-hyde_theme = ""
-hyde_links = [
+editorial_sticky = true
+editorial_reverse = false
+editorial_theme = ""
+editorial_links = [
 ]
 
 [author]

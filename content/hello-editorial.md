@@ -1,8 +1,11 @@
 +++
 title = "Hi, I’m Editorial by HTML5 UP"
 date = 2018-09-07
-lead = "A free and fully responsive site template"
 +++
+
+A free and fully responsive site template. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.
+
+<!-- more -->
 
 Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.
 

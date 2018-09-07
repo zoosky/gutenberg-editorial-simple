@@ -20,7 +20,7 @@
       {% endblock extra_head %}
     </head>
 
-    <body class="is-preload {{ config.extra.hyde_theme }} {% if config.extra.hyde_reverse %}layout-reverse{% endif %}">
+    <body class="is-preload {{ config.extra.editorial_theme }} {% if config.extra.editorial_reverse %}layout-reverse{% endif %}">
         <!-- Wrapper -->
 		<div id="wrapper">
 
@@ -156,9 +156,9 @@
                                         <article>
                                                 <a href="{{ page.permalink | safe }}" class="image"><img src="images/pic06.jpg" alt="" /></a>
                                                 <h3>{{ page.title }}</h3>
-                                                <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+                                                <p>{{ page.summary | safe }}</p>
                                                 <ul class="actions">
-                                                    <li><a href="{{ page.permalink | safe }}" class="button">More</a></li>
+                                                    <li><a href="{{ page.permalink | safe }}#" class="button">More</a></li>
                                                 </ul>
                                                 <span class="post-date">{{ page.date | date(format="%d.%m.%Y") }}</span>
                                         </article>
@@ -176,7 +176,7 @@
 
             {% block sidebar %}
                 <div id="sidebar">
-                    <div class="inner {% if config.extra.hyde_sticky %}sidebar-sticky{% endif %}">
+                    <div class="inner {% if config.extra.editorial_sticky %}sidebar-sticky{% endif %}">
                         <div class="sidebar-about">
                             {% block sidebar_about %}
                                 <a href="{{ config.base_url }}"><h1>{{ config.title }}</h1></a>
@@ -188,7 +188,7 @@
 
                         <ul class="sidebar-nav">
                             {% block sidebar_nav %}
-                            {% for link in config.extra.hyde_links %}
+                            {% for link in config.extra.editorial_links %}
                             <li><a href="{{link.url}}">{{link.name}}</a></li>
                             {% endfor %}
                             {% endblock sidebar_nav %}
@@ -205,5 +205,7 @@
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
     </body>
-
+<!-- context
+{{ __tera_context }}
+-->
 </html>
