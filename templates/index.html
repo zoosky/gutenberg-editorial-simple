@@ -40,7 +40,7 @@
 										<li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a></li>
 									</ul>
 								</header>
-
+							{% block banner %}
 							<!-- Banner -->
 								<section id="banner">
 									<div class="content">
@@ -58,7 +58,8 @@
 										<img src="/images/pic10.jpg" alt="" />
 									</span>
 								</section>
-
+							{% endblock banner %}
+							{% block features %}
 							<!-- Section -->
 								<section>
 									<header class="major">
@@ -95,7 +96,7 @@
 										</article>
 									</div>
 								</section>
-
+							{% endblock features %}
                             <!-- Section -->
                             {% block content %}
 								<section>
@@ -116,8 +117,9 @@
                                         {% endfor %}
 									</div>
 								</section>
-                                {% endblock content %}
-
+                            {% endblock content %}
+						<hr>
+						<div class="footer">Last updated  {{ now() | date(format="%d.%m.%Y") }}</p>
 						</div>
                     </div>
                     
